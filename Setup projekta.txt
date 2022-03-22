@@ -1,0 +1,23 @@
+1. Kreiranje projekta
+npx create-react-app my-app
+gdje je my-app naziv foldera i nove aplikacije
+2. Kad se sve zavrsi udjes u svoju novu app i:
+npm start
+da pokrenes. Mozes editovati app.js
+
+da zaustavis pokrenuti projekat:
+npx kill-port 3000
+
+3. Instaliranje rutera
+npm install react-router-dom
+
+npm install react-bootstrap bootstrap
+
+4. Redux toolkit sa reduxom zajedno
+npm install react-redux
+npm install @reduxjs/toolkit
+
+6. Instalirao axios 
+npm install axios
+
+
