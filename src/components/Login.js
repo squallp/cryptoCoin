@@ -10,7 +10,6 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch} from "react-redux";
 import {logged} from '../redux/reducers/loggedIn';
 
-
 function Login() {
     const [userName, setUserName] = useState('');
     const [userPass, setUserPass] = useState('');
@@ -32,12 +31,12 @@ function Login() {
         <Col xs={12} md={6}>
         <h1 className="heading">Login</h1>
         <InputGroup size="sm" className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-sm">Username(Admin):</InputGroup.Text>
-        <FormControl onChange={(e) => setUserName(e.target.value)} aria-label="Filter" aria-describedby="inputGroup-sizing-sm" />
+            <InputGroup.Text id="inputGroup-sizing-sm">Username(Admin):</InputGroup.Text>
+            <FormControl onChange={(e) => setUserName(e.target.value)} aria-label="Filter" aria-describedby="inputGroup-sizing-sm" />
         </InputGroup>
         <InputGroup size="sm" className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-sm">Password(Admin):</InputGroup.Text>
-        <FormControl  onChange={(e) => setUserPass(e.target.value)} type="password" aria-label="Filter" aria-describedby="inputGroup-sizing-sm" />
+            <InputGroup.Text id="inputGroup-sizing-sm">Password(Admin):</InputGroup.Text>
+            <FormControl  onChange={(e) => setUserPass(e.target.value)} type="password" aria-label="Filter" aria-describedby="inputGroup-sizing-sm" />
         </InputGroup>
         <Button onClick={logIn} variant="primary">Log in</Button>
         </Col>

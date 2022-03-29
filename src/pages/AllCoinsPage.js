@@ -6,12 +6,12 @@ import Footer from '../components/Footer';
 
 function AllCoinsPage() {
 	return (
-<>
-<Navigation />
-<Total />
-<AllCoins />
-</>
-);
+		<>
+		<Navigation />
+		<Total />
+		<AllCoins />
+		</>
+		);
 }
 
 export default AllCoinsPage;

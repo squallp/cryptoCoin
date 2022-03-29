@@ -11,21 +11,21 @@ const newsApiHeaders = {
 const newsApiParams = {
     sources: 'nytimes,economictimes,newsbtc,coindesk,businessinsider,cointelegraph,coindesk,utoday,coinrivet',
     query: 'crypto',
-    limit: '50'
+    limit: '100'
   }
 
   const createRequest = (url) => ({
-  	url, params:newsApiParams, headers: newsApiHeaders,
+    url, params:newsApiParams, headers: newsApiHeaders,
   });
 
   export const newsApi = createApi({
-  	reducerPath: 'newsApi',
-  	baseQuery: fetchBaseQuery({baseUrl}),
-  	endpoints: (builder) => ({
-  		getNews: builder.query({
-  			query: () => createRequest('/feed')
-  		})
-  	})
+    reducerPath: 'newsApi',
+    baseQuery: fetchBaseQuery({baseUrl}),
+    endpoints: (builder) => ({
+      getNews: builder.query({
+        query: () => createRequest('/feed')
+      })
+    })
   });
 
   export const {useGetNewsQuery,} = newsApi;

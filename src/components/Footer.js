@@ -6,9 +6,9 @@ function Footer() {
   return (
     <>
     <Navbar  fixed="bottom" bg="dark"  variant="dark">
-    <Container>
-    <Navbar.Brand href="#home">coinBase</Navbar.Brand>
-    </Container>
+    	<Container>
+    	<Navbar.Brand href="#home">coinBase</Navbar.Brand>
+    	</Container>
     </Navbar>
     </>
     );
