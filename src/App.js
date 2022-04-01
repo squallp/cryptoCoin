@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route, useRoutes} from "react-router-do
 import AllCoinsPage from './pages/AllCoinsPage';
 import CryptoNewsPage from './pages/CryptoNewsPage';
 import IndexPage from './pages/IndexPage';
+import LoginPage from './pages/LoginPage';
 import {useSelector} from "react-redux";
 import {loggedIn} from './redux/reducers/loggedIn';
 
@@ -14,14 +15,16 @@ function App() {
         <Routes>
         {loggedInState > 0 ?
             <>
-            <Route path='/'  element={<AllCoinsPage />} />
+            <Route path='/'  element={<IndexPage />} />
+            <Route path='/total'  element={<IndexPage />} />
             <Route path='/allcoins'  element={<AllCoinsPage />} />
             <Route path='/cryptonews'  element={<CryptoNewsPage />} />
             </>
             : <>
-            <Route path='/'  element={<IndexPage />} />
-            <Route path='/allcoins'  element={<IndexPage />} />
-            <Route path='/cryptonews'  element={<IndexPage />} />
+            <Route path='/'  element={<LoginPage />} />
+            <Route path='/total'  element={<LoginPage />} />
+            <Route path='/allcoins'  element={<LoginPage />} />
+            <Route path='/cryptonews'  element={<LoginPage />} />
             </>
         }
         </Routes>

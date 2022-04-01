@@ -87,6 +87,10 @@ code {
   padding-right: 1rem;
 }
 
+.recharts-responsive-container {
+  height: 150px !important;
+}
+
 /*.list-group-item:hover {
 	background-color:#bfc1f1; 
 }*/

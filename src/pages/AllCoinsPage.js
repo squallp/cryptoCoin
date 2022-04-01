@@ -8,7 +8,6 @@ function AllCoinsPage() {
 	return (
 		<>
 		<Navigation />
-		<Total />
 		<AllCoins />
 		</>
 		);

@@ -5,20 +5,23 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import millify from "millify";
 import {useGetCryptosQuery} from '../redux/services/cryptoApi';
+import ChartTotal from './ChartTotal';
 
 function Total() {
     const {data, isFetching} = useGetCryptosQuery();
 
+    
+    const stats = data?.data?.stats;
+    
+    const setOptions = () => ({precision: 2,   decimalSeparator: ",", space: true});
+
     if (isFetching) {
         return 'Loading total...';
     }
-    const stats = data?.data?.stats;
-
-    const setOptions = () => ({precision: 2,   decimalSeparator: ",", space: true});
-
+    
     return (
         <>
-        <Container fluid className="around">
+        <Container fluid className="around endView">
         <Row>
         <Col xs={12} md={3}></Col>
         <Col xs={12} md={6}>
@@ -33,6 +36,10 @@ function Total() {
             <ListGroup.Item>Total markets: {millify(stats.totalMarkets, setOptions())}</ListGroup.Item>
         </ListGroup>
         </Card>
+        <h1 className="heading">Market cap share</h1>
+
+        <ChartTotal height={300} data={data?.data?.coins} />
+        
         </Col>
         <Col xs={12} md={3}></Col>
         </Row>
