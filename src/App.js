@@ -20,7 +20,8 @@ function App() {
             <Route path='/allcoins'  element={<AllCoinsPage />} />
             <Route path='/cryptonews'  element={<CryptoNewsPage />} />
             </>
-            : <>
+            : 
+            <>
             <Route path='/'  element={<LoginPage />} />
             <Route path='/total'  element={<LoginPage />} />
             <Route path='/allcoins'  element={<LoginPage />} />

@@ -61,10 +61,12 @@ code {
 
 .endView {
   padding-bottom: 10rem;
+  height: 100%
 }
 
 .endViewLogin {
   padding-bottom: 21rem;
+  min-height: 100%;
 }
 
 .image {
@@ -90,7 +92,3 @@ code {
 .recharts-responsive-container {
   height: 150px !important;
 }
-
-/*.list-group-item:hover {
-	background-color:#bfc1f1; 
-}*/

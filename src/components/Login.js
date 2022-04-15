@@ -25,7 +25,7 @@ function Login() {
 
     return (
         <>
-        <Container fluid className="around endViewLogin">
+        <Container fluid className="around vh-100">
         <Row>
         <Col xs={12} md={3}></Col>
         <Col xs={12} md={6}>

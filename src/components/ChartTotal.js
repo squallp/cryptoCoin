@@ -7,7 +7,7 @@ function ChartTotal(props) {
 
    props?.data.map((coin, index) => {
         parsiranoData.push({
-            name: coin.name,
+            name: coin.name.toString(),
             marketCap: parseInt(coin.marketCap),
         });
    });
